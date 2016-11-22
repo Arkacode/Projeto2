@@ -33,3 +33,17 @@
 .register-login{
   margin-right: 35px;
 }
+
+.button_search{
+  background-color: #009494;
+  color : white;
+}
+
+.bg_index{
+  background-image: url("../img/work.jpg");
+  background-repeat: no-repeat;;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100% 110%;
+}
