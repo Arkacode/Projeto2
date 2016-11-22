@@ -40,10 +40,9 @@
 }
 
 .bg_index{
-  background-image: url("../img/work.jpg");
-  background-repeat: no-repeat;;
+  background: url("../img/work.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 100% 110%;
+  background-size: cover;
 }
