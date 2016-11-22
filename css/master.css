@@ -13,14 +13,23 @@
   position: relative;
   width:42%;
   float:left;
+  font-size: 12pt;
   color:#000;
 }
 .combox{
   width: 20%;
   margin-left: 1%;
   float: left;
+  font-size: 12pt;
 }
 .search{
   margin-left: 1%;
   width: 15%;
+  font-size: 12pt;
+}
+.brand{
+  margin-left: 35px;
+}
+.register-login{
+  margin-right: 35px;
 }

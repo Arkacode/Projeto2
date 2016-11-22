@@ -7,56 +7,44 @@
       <link rel="stylesheet" href="./css/master.css" media="screen">
     </head>
     <body>
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                        <img src="http://placehold.it/150x20&text=Logo" alt="">
-                    </a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Services</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <a href="#" type="button" class="btn btn-default navbar-btn pull-right button-login">
-                      Entrar
-                    </a>
-                </div>
-                <!-- /.navbar-collapse -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand brand" href="#">
+                  <img src="http://placehold.it/150x20&text=Logo" alt="">
+              </a>
             </div>
-            <!-- /.container -->
-        </nav>
-        <div class="main">
-          <input type="text" class="form-control textbox-search" placeholder="Ex: Programação, Multimédia...">
-          <select class="form-control combox">
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-left">
+                  <li><a href="#">Empregos</a></li>
+                  <li><a href="#about">Empresas</a></li>
+                  <li><a href="#about">Anunciar</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right register-login">
+                <li><a href="#about">Iniciar Sessão</a></li>
+                <li><a href="#contact">Registar</a></li>
+              </ul>
+            </div>
+          </nav>
+        <div class="main col-md-10">
+          <input type="text" class="form-control textbox-search input-lg" placeholder="Ex: Programação, Multimédia...">
+          <select class="form-control combox input-lg">
             <option disabled selected value>Cidade</option>
             <option value="porto">Porto</option>
             <option value="lisboa">Lisboa</option>
             <option value="algarve">Algarve</option>
           </select>
-          <select class="form-control combox">
+          <select class="form-control combox input-lg">
             <option disabled selected value>Área</option>
             <option value="programação">Programação</option>
             <option value="arquitetura">Arquitetura</option>
             <option value="callcenter">Call Center</option>
           </select>
-          <button type="button" class="btn btn-default search">Pesquisar</button>
+          <button type="button" class="btn btn-default search input-lg">Pesquisar</button>
         </div>
         <footer>
           <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
