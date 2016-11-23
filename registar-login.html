@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registar!</title>
+      <link rel="stylesheet" href="./css/bootstrap.min.css" media="screen" title="bootstrap">
+      <link rel="stylesheet" href="./css/master.css" media="screen">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    </head>
+    <body class="bg_index">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand brand" href="#">
+                  <img src="http://placehold.it/150x20&text=Logo" alt="">
+              </a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-left">
+                  <li><a href="#">Empregos</a></li>
+                  <li><a href="#about">Empresas</a></li>
+                  <li><a href="#about">Anunciar</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right register-login">
+                <li><a href="#about">Iniciar Sessão</a></li>
+                <li><a href="#contact">Registar</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container container-register-login">
+           <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+               <div class="panel panel-info" >
+                       <div class="panel-login-register">
+                           <div class="title-login-register">Iniciar Sessão</div>
+                       </div>
+                       <div class="panel-body" >
+                          <!-- <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>    login alert*/-->
+                           <form id="loginform" class="form-horizontal" role="form">
+                               <div class="input-group input-email">
+                                           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                           <input id="login-username" type="text" class="form-control" name="email" value="" placeholder="Email">
+                                       </div>
+                               <div class="input-group input-password">
+                                           <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                           <input id="login-password" type="password" class="form-control" name="password" placeholder="Palavra-Passe">
+                                       </div>
+                               <div class="input-group">
+                                         <div class="checkbox">
+                                           <label>
+                                             <input id="login-remember" type="checkbox" name="remember" value="1"> Lembrar-me!
+                                           </label>
+                                         </div>
+                                       </div>
+                                   <div class="form-group group-btn-logins">
+                                       <!-- Button -->
+                                       <div class="col-sm-12 controls">
+                                         <button id="btn-login" type="button" class="btn btn-default btn-block">Iniciar Sessão  </button>
+                                         <button id="btn-fblogin" type="button" class="btn btn-default btn-block">Iniciar Sessão com Facebook</button>
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <div class="col-md-12 control">
+                                           <div class="register">
+                                              Ainda não é um utilizador?
+                                           <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                               Registe-se aqui.
+                                           </a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </form>
+                          </div>
+                    </div>
+              </div>
+                <div id="signupbox" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 signupbox">
+                       <div class="panel panel-info">
+                         <div class="panel-login-register">
+                             <div class="title-login-register">Registar</div>
+                         </div>
+                           <div class="panel-body" >
+                               <form id="signupform" class="form-horizontal" role="form">
+                                  <!-- <div id="signupalert" style="display:none" class="alert alert-danger">
+                                       <p>Error:</p>
+                                       <span></span>
+                                   </div>-->
+                                   <div class="form-group">
+                                       <label for="email" class="col-md-3 control-label">Email</label>
+                                       <div class="col-md-9">
+                                           <input type="text" class="form-control" name="email" placeholder="email">
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="password" class="col-md-3 control-label">Palavra-passe</label>
+                                       <div class="col-md-9">
+                                           <input type="password" class="form-control" name="passwd" placeholder="palavra-passe">
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="firstname" class="col-md-3 control-label">Nome</label>
+                                       <div class="col-md-9">
+                                           <input type="text" class="form-control" name="firstname" placeholder="nome">
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label for="firstname" class="col-md-3 control-label">Data Nasc.</label>
+                                       <div class="col-md-9">
+                                           <input type="text" class="form-control" name="firstname" placeholder="DD/MM/AAAA">
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <!-- Button -->
+                                       <div class="col-md-offset-3 col-md-9">
+                                           <button id="btn-signup" type="button" class="btn btn-default btn-register">Registar</button>
+                                           <span>ou</span>
+                                            <button id="btn-fbsignup" type="button" class="btn btn-default btn-register-facebook">Registar com Facebook</button>
+                                       </div>
+                                   </div>
+                               </form>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                      <footer>
+                        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                          <div class="container">
+                            <ol class="breadcrumb">
+                              <li><a href="#">Ajuda</a></li>
+                              <li><a href="#">Sobre nós</a></li>
+                              <li><a href="#">Data</a></li>
+                            </ol>
+                          </div>
+                        </nav>
+                      </footer>
+        <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+      </body>
+</html>

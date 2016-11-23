@@ -38,11 +38,52 @@
   background-color: #009494;
   color : white;
 }
-
 .bg_index{
   background: url("../img/work.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+
+
+/* registo e login*/
+.container-register-login{
+  margin-top: 10%;
+}
+.panel-login-register{
+  margin: 0 auto;
+  display: block;
+  width: 95%;
+  border-bottom: 1px solid grey;
+}
+.title-login-register{
+  color: #009494;
+  padding: 10px 10px 10px 0px;
+}
+.input-email{
+  margin-bottom: 25px;
+}
+.input-password{
+  margin-bottom: 15px;
+}
+.group-btn-logins{
+  margin-top:15px
+}
+.register{
+  border-top: 1px solid#888;
+  padding-top:15px;
+  font-size:85%
+}
+.signupbox{
+  display:none;
+}
+.btn-register{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.btn-register-facebook{
+  padding-left: 30px;
+  padding-right: 30px;
 }
