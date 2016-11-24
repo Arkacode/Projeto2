@@ -99,6 +99,10 @@
     width: 26px;
     height: 26px;
 }
+.pre-scrollable-body {
+    max-height: 70%;
+    overflow-y: scroll;
+}
 .perfilmain{
   margin-top: 10%;
 }
