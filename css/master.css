@@ -93,3 +93,17 @@
   position: relative;
   top:-25px;
 }
+/*navbar perfil foto*/
+.profile-image {
+    border-radius: 60px;
+    width: 26px;
+    height: 26px;
+}
+.perfilmain{
+  margin-top: 10%;
+}
+.img-experiencias{
+  margin-top: 20px;
+  width: 140px;
+  height: 140px;
+}
