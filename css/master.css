@@ -87,3 +87,9 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+.recuperar-pw{
+  float:right;
+  font-size: 80%;
+  position: relative;
+  top:-25px;
+}
