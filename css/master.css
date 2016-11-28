@@ -132,7 +132,7 @@
     margin-bottom: 2%;
   }
   .searchempregos{
-    margin-top: 10%;
+    margin-top: 5%;
   }
 /*	--------------------------------------------------
 	:: Table Filter
@@ -308,4 +308,72 @@
 		width: 600px;
 		margin: 30px auto;
 	}
+}
+
+/*freelancer*/
+.freelancer{
+  margin-top: 3%;
+}
+.freelancer-img{
+  margin-top: 40px;
+}
+
+/*info empregos*/
+.info-empregos{
+margin-top: 3%;
+}
+
+
+
+/* this is the bit that gives the border color */
+div.list-category h3.title
+{
+display: block;
+padding: 14px 0 15px 0;
+font-size: 20px;
+font-weight: 100;
+margin-bottom: 0px;
+border-bottom: 1px solid;
+}
+
+div.list-category span.list-footer
+{
+display: block;
+padding: 14px 0 15px 0;
+font-size: 20px;
+font-weight: 100;
+margin-bottom: 0px;
+border-bottom: 1px solid;
+}
+
+/* removes the border at the top of the list so it doesnt cover up the border above */
+div.list-category a.list-group-item:first-child
+{
+border-top: 0;
+}
+
+div.list-category .list-footer
+{
+margin-top:-15px;
+}
+
+div.list-category a.list-group-item
+{
+border-left: 0;
+border-right: 0;
+border-radius: 0;
+border-bottom: 1px solid #E0E4E9;
+color: #4c4c4c;
+text-decoration: none;
+padding-left: 0;
+padding-right: 0;
+overflow: hidden;
+}
+
+.truncate
+{
+width: 80%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
