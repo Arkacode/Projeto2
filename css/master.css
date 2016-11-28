@@ -377,3 +377,47 @@ white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
 }
+
+
+/*index*/
+
+@media (max-width: 480px) {
+.main{
+  margin-top: 50%;
+  width: 90%;
+}
+.box-main{
+  float: none;
+  margin: 5px auto;
+  width: 100%;
+}
+/*empregos*/
+.searchempregos{
+  margin-top: 15%;
+}
+
+/*anunciar*/
+.anunciar{
+  margin-top: 15%;
+}
+
+/*registo recuperer login*/
+.container-register-login{
+  margin-top: 25%;
+}
+
+/*perfil*/
+.perfilmain{
+  margin-top: 15%;
+}
+.img-experiencias{
+  margin-left: 30%;
+}
+}
+
+@media (max-width: 1200px) {
+/*empregos*/
+.searchempregos{
+  margin-top: 15%;
+}
+}
