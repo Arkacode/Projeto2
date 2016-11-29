@@ -57,8 +57,11 @@ body {
 }
 
 /* registo e login*/
-.container-register-login{
-  margin-top: 10%;
+
+.btn-entrar{
+  padding: 0;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 .panel-login-register{
   margin: 0 auto;
@@ -106,10 +109,6 @@ body {
     border-radius: 60px;
     width: 26px;
     height: 26px;
-}
-.perfilmain{
-  margin-top: 10%;
-  margin-bottom: 10%;
 }
 .img-experiencias{
   margin-top: 20px;
@@ -380,7 +379,15 @@ overflow: hidden;
 text-overflow: ellipsis;
 }
 
+.imagem-perfil{
+  width: 300px;
+  height: 300px;
+}
 
+.nome-perfil{
+  font-size: 12pt;
+  font-weight: bold;
+}
 /*index*/
 
 @media (max-width: 480px) {
