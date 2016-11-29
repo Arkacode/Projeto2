@@ -7,7 +7,7 @@ body {
 }
 .main{
 	width:70%;
-	margin: 350px auto;
+	margin: 220px auto;
 	float: none;
 	display: block;
 	position: relative;
@@ -388,7 +388,7 @@ text-overflow: ellipsis;
 
 @media (max-width: 480px) {
 .main{
-  margin-top: 50%;
+  margin-top: 15%;
   width: 90%;
 }
 .box-main{
