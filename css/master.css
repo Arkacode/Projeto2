@@ -1,3 +1,7 @@
+body {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
 .navbar-header{
   margin-left:5px;
 }
@@ -397,9 +401,6 @@ text-overflow: ellipsis;
 }
 
 /*anunciar*/
-.anunciar{
-  margin-top: 15%;
-}
 
 /*registo recuperer login*/
 .container-register-login{
@@ -407,9 +408,7 @@ text-overflow: ellipsis;
 }
 
 /*perfil*/
-.perfilmain{
-  margin-top: 15%;
-}
+
 .img-experiencias{
   margin-left: 30%;
 }
@@ -417,7 +416,4 @@ text-overflow: ellipsis;
 
 @media (max-width: 1200px) {
 /*empregos*/
-.searchempregos{
-  margin-top: 15%;
-}
 }
