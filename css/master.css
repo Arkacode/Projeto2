@@ -51,13 +51,10 @@ body {
   background-size: cover;
 }
 
-
 .void{
   height:200px;
   display: block;
 }
-
-
 
 /* registo e login*/
 .container-register-login{
