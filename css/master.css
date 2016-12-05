@@ -478,3 +478,10 @@ text-overflow: ellipsis;
 .container-popup{
   margin: 25px auto;
 }
+.btn-popup{
+  width: 100%;
+  margin: 15px auto;
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+}
