@@ -23,9 +23,8 @@
       <ul class="nav navbar-nav navbar-left">
         <li><a href="empregos.html">Empregos</a></li>
         <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="anunciaremprego.html">Anunciar Emprego</a></li>
-        <li><a href="anunciarfreelancer.html">Anunciar Projeto</a></li>
-        <li><a href="freelancer.html">Top Freelancer</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#popup-modal">Anunciar</a></li>
+        <li><a href="freelancer.html">Freelancer</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right register-login">
         <li class="dropdown">
@@ -41,6 +40,24 @@
           </ul>
         </div>
       </nav>
+      <div class="modal fade" id="popup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+        <div class="popup-container">
+          <h1>Escolha o que pretende anunciar</h1>
+          <div class="row container-popup">
+            <div class="col-md-6">
+            <a href="anunciaremprego.html"><img src="./img/profile.jpg" class="img-circle" width="200" height="200">
+            <input type="submit" name="emprego" class="btn-default btn-popup" value="Anunciar Emprego"></a>
+            </div>
+            <div class="col-md-6">
+            <a href="anunciarfreelancer.html"><img src="./img/profile.jpg" class="img-circle" width="200" height="200">
+            <input type="submit" name="freelancer" class="btn-primary btn-popup" value="Anuciar Projeto"></a>
+            </div>
+            <a href="#" class="center-block">Ajuda?</a>
+          </div>
+        </div>
+        </div>
+      </div>
       <div class="container info-empregos">
         <h1>Designer Gráfico</h1>
         <div class="row text-center">

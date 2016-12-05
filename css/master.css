@@ -431,9 +431,11 @@ text-overflow: ellipsis;
 }
 
 .thumbnail > h4 {
+    margin-top: 28px;
     padding: 7px 5px 0px;
     white-space: nowrap;
     overflow: hidden;
+    text-align: center;
     text-overflow: ellipsis;
 }
 .thumbnail h4 .info {
@@ -441,16 +443,14 @@ text-overflow: ellipsis;
     top: 0px;
     right: 0px;
     font-size: 0.6em;
-    padding-left: 15px;
-    border-top-right-radius: 3px;
-    border-bottom-left-radius: 4px;
+    padding: 8px;
     border-radius: 0px;
-    border-bottom-left-radius: 5px;
     cursor:  pointer;
+    width: 100%;
 }
 
 .thumbnail h4 .info > span {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .thumbnail img {
