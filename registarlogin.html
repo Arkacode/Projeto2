@@ -58,14 +58,14 @@
             </div>
             <div class="panel-body" >
               <!-- <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>    login alert*/-->
-              <form id="loginform" class="form-horizontal" role="form">
+              <form id="loginform" name="loginform" class="form-horizontal"  role="form" method="post" action="./php/login.php">
                 <div class="input-group input-email">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                  <input id="login-username" type="text" class="form-control" name="email" value="" placeholder="Email">
+                  <input id="loginemail" type="email" class="form-control" placeholder="email" />
                 </div>
                 <div class="input-group input-password">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                  <input id="login-password" type="password" class="form-control" name="password" placeholder="Palavra-Passe">
+                  <input id="loginpassword" type="password" class="form-control" placeholder="password" />
                 </div>
                 <div class="input-group">
                   <div class="checkbox">
@@ -75,9 +75,8 @@
                   </div>
                 </div>
                 <div class="form-group group-btn-logins">
-                  <!-- Button -->
                   <div class="col-sm-12 controls">
-                    <button id="btn-login" type="button" class="btn btn-default btn-block">Iniciar Sessão  </button>
+                    <button id="login" class="btn btn-default btn-block">Iniciar Sessão</button>
                     <button id="btn-fblogin" type="button" class="btn btn-default btn-block">Iniciar Sessão com Facebook</button>
                   </div>
                 </div>
@@ -102,10 +101,6 @@
             </div>
             <div class="panel-body" >
               <form id="signupform" name="signupform"class="form-horizontal" role="form" method="post" action="./php/registar.php">
-                <!-- <div id="signupalert" style="display:none" class="alert alert-danger">
-                <p>Error:</p>
-                <span></span>
-              </div>-->
               <div class="form-group">
                 <label for="email" class="col-md-3 control-label">Email</label>
                 <div class="col-md-9">

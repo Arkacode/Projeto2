@@ -5,7 +5,6 @@ $(document).ready( function() {
 $("#enviar").click(function(e){
   //e.preventDefault();
 })
-
 $(function() {
   $("form[name='signupform']").validate({
 
@@ -61,6 +60,35 @@ $(function() {
             }
             return false;
         });
+    }
+  });
+});
+
+$(function() {
+  $("form[name='loginform']").validate({
+
+    rules: {
+      loginemail: "required",
+      loginemail: {
+        required: true,
+        email: true
+      },
+      loginpassword: {
+        required: true,
+        minlength: 5,
+        maxlength: 10
+      }
+    },
+    messages: {
+      loginpassword: {
+        required: "Please provide a password",
+        minlength: "Your password must be at least 5 characters long",
+        maxlength: "Your password must be up to 10 characters long"
+      },
+      loginemail: "Please enter a valid email address"
+    },
+    submitHandler: function(form) {
+      form.submit();
     }
   });
 });

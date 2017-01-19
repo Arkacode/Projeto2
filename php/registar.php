@@ -1,9 +1,5 @@
 <?php
-// it will never let you open index(login) page if session is set
-if ( isset($_SESSION['user'])!="" ) {
-		header("Location: index.php");
-		exit;
-}
+
 include "../php/dbconfig.php";
  if(isset($_POST['insert']))
  {
