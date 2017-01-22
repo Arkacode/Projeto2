@@ -88,7 +88,51 @@ $(function() {
       loginemail: "Please enter a valid email address"
     },
     submitHandler: function(form) {
-      form.submit();
+      $("#btn_login").click(function(){
+      var email=$("#loginemail").val();
+      var password=$("#loginpassword").val();
+      var dataString="loginemail="+email+"&loginpassword="+password+"&btn_login=";
+      if($.trim(email).length>0 & $.trim(password).length>0)
+      {
+      $.ajax({
+      type: "POST",
+      url: "http://localhost/Projeto2/php/login.php",
+      data: dataString,
+      crossDomain: true,
+      cache: false,
+      beforeSend: function(){ $("#btn_login").html('Connecting...');},
+      success: function(data){
+      if(data=="success")
+      {
+      localStorage.login="true";
+      localStorage.email=email;
+      window.location.href = "index.html";
+      }
+      else if(data="failed")
+      {
+      alert("Login error");
+      $("#login").html('Login');
+      }
+      }
+      });
+      }return false;
+      });
     }
   });
+});
+
+$(document).ready(function() {
+        var url = "http://localhost/Projeto2/php/empregos.php";
+        $.getJSON(url, function(result) {
+            console.log(result);
+            $.each(result, function(i, field) {
+              var id = field.id;
+              var nomeanuncio = field.nomeanuncio;
+              var localidade = field.localidade;
+              var data = field.data;
+              var idestado = field.idestado;
+              var idtipoanuncio = field.idtipoanuncio;
+                $("#listview").append("<span>$" + nomeanuncio + "</span><h2>" + localidade + " </h2><p>" + data + "</p>");
+            });
+        });
 });

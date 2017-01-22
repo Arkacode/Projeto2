@@ -1,17 +1,16 @@
 <?php
-include "../php/dbconfig.php";
-if(isset($_POST['loginform']))
+require_once '../php/dbconfig.php';
+
+if(isset($_POST))
 {
-  $email=$_POST['loginemail'];
-  $password=$_POST['loginpassword'];
-  $login=mysql_num_rows(mysql_query($con,"SELECT * from `users` where `email`='$email' and `password`='$password'"));
-  if($login!=0)
-  {
-    echo "success";
-  }
-  else
-  {
-    echo "failed";
-  }
+ $email = mysql_escape_string($_POST['loginemail']);
+ $password = mysql_escape_string($_POST['loginpassword']);
+ $sql = mysql_query("SELECT email, password FROM utilizadores WHERE email = '$email' AND password = '$password'") or die(mysql_error());
+ if(mysql_num_rows($sql) > 0){
+   header("Location: ../../Projeto2/empregos.html");
+ }
+ else{
+  echo "Wrong password";
+ }
 }
 ?>

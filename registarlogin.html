@@ -58,14 +58,14 @@
             </div>
             <div class="panel-body" >
               <!-- <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>    login alert*/-->
-              <form id="loginform" name="loginform" class="form-horizontal"  role="form" method="post" action="./php/login.php">
+              <form id="loginform" name="loginform" class="form-horizontal"  role="form" method="post">
                 <div class="input-group input-email">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                  <input id="loginemail" type="email" class="form-control" placeholder="email" />
+                  <input id="loginemail" name="loginemail" type="email" class="form-control" placeholder="email" />
                 </div>
                 <div class="input-group input-password">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                  <input id="loginpassword" type="password" class="form-control" placeholder="password" />
+                  <input id="loginpassword" name="loginpassword" type="password" class="form-control" placeholder="password" />
                 </div>
                 <div class="input-group">
                   <div class="checkbox">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="form-group group-btn-logins">
                   <div class="col-sm-12 controls">
-                    <button id="login" class="btn btn-default btn-block">Iniciar Sessão</button>
+                    <button type="submit" id="btn_login" name="btn_login" class="btn btn-default btn-block">Iniciar Sessão</button>
                     <button id="btn-fblogin" type="button" class="btn btn-default btn-block">Iniciar Sessão com Facebook</button>
                   </div>
                 </div>
@@ -128,7 +128,7 @@
               <div class="form-group">
                 <!-- Button -->
                 <div class="col-md-offset-3 col-md-9">
-                  <input type="submit" id="insert"  name="insert" class="btn btn-default btn-register" value="Enviar" />
+                    <input type="submit" id="insert"  name="insert" class="btn btn-default btn-register" value="Enviar" />
                   <span>ou</span>
                   <button id="btn-fbsignup" type="button" class="btn btn-default btn-register-facebook">Registar com Facebook</button>
                 </div>

@@ -7,7 +7,7 @@ include "../php/dbconfig.php";
  $password=$_POST['password'];
  $nome=$_POST['nome'];
  $data=$_POST['data'];
- $q=mysqli_query($con,"INSERT INTO `users` (`email`,`password`,`nome`,`data`) VALUES ('$email','$password','$nome','$data')");
+ $q=mysql_query("INSERT INTO `utilizadores` (`nome`,`email`,`password`,`data`) VALUES ('$nome','$email','$password','$data')");
  if($q)
   echo "success";
  else
