@@ -7,6 +7,38 @@
   <link rel="stylesheet" href="./css/master.css" media="screen">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+      $("#anunciaremp").click(function() {
+          var title = $("#title").val();
+          var location = $("#location").val();
+          var descricao = $("#descricao").val();
+          var dataString = "title=" + title + "&location=" + location + "&descricao=" + descricao + "&anunciaremp=";
+          if ($.trim(title).length > 0 & $.trim(location).length > 0 & $.trim(descricao).length > 0) {
+              $.ajax({
+                  type: "POST",
+                  url: "http://192.168.1.6/Projeto2/php/anunciaremprego.php",
+                  data: dataString,
+                  crossDomain: true,
+                  cache: false,
+                  beforeSend: function() {
+                      $("#anunciaremp").val('Connecting...');
+                  },
+                  success: function(data) {
+                      if (data == "success") {
+                          alert("inserted");
+                          $("#anunciaremp").val('submit');
+                      } else if (data == "error") {
+                          alert("error");
+                      }
+                  }
+              });
+          }
+          return false;
+      });
+  });
+  </script>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -60,41 +92,41 @@
       </div>
       <form class="container span3 anunciar">
         <div class="form-group">
-          <label for="exampleInputEmail1">Título do anúncio</label>
-          <input type="text" class="form-control" placeholder="Ex: Programação, Multimédia... ">
+          <label for="title">Título do anúncio</label>
+          <input id="title" name="title" type="text" class="form-control" placeholder="Ex: Programação, Multimédia... ">
         </div>
-        <div class="form-group">
+        <!--div class="form-group">
           <label for="sel1">Categoria</label>
-          <select class="form-control" id="sel1">
-            <option>Limpeza</option>
-            <option>Informática</option>
-            <option>Gestão</option>
-            <option>Construção Civil</option>
+          <select id="categoria" name="categoria" class="form-control" id="sel1">
+            <option value="Limpeza">Limpeza</option>
+            <option value="Informática">Informática</option>
+            <option value="Gestão">Gestão</option>
+            <option value="Construção Civil">Construção Civil</option>
+          </select>
+        </div-->
+        <div class="form-group">
+          <label for="location">Zona</label>
+          <select class="form-control" id="location" name="location">
+            <option value="Porto">Porto</option>
+            <option value="Braga">Braga</option>
+            <option value="Lisboa">Lisboa</option>
+            <option value="Algarve">Algarve</option>
+            <option value="Bragança">Bragança</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="exampleSelect1">Zona</label>
-          <select class="form-control" id="exampleSelect1">
-            <option>Porto</option>
-            <option>Braga</option>
-            <option>Lisboa</option>
-            <option>Algarve</option>
-            <option>Bragança</option>
-          </select>
-        </div>
-        <div class="form-group">
+        <!--div class="form-group">
           <label for="example">Página Web</label>
           <input type="text" class="form-control" placeholder="Ex: www.yourdomain.com etc.. ">
-        </div>
+        </div-->
         <div class="form-group">
-          <label for="exampleTextarea">Descrição</label>
-          <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" class="form-control" rows="3"></textarea>
         </div>
-        <div class="form-group">
+        <!--div class="form-group">
           <label for="exampleInputFile">Documentos</label>
           <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-        </div>
-        <button type="submit" class="btn btn-primary">Anunciar</button>
+        </div-->
+        <input type="button" id="anunciaremp" name="anunciaremp" class="btn btn-primary" value="Anunciar"></button>
       </form>
       <footer>
         <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">

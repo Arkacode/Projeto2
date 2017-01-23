@@ -7,6 +7,20 @@
   <link rel="stylesheet" href="./css/master.css" media="screen">
   <link rel="stylesheet" href="./css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/geturi.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+      var id = decodeURI(getUrlVars()["id"]);
+      var titulo = decodeURI(getUrlVars()["nome"]);
+      var localidade = decodeURI(getUrlVars()["localidade"]);
+      var descricao = decodeURI(getUrlVars()["descricao"]);
+      $("#id").val(id);
+      $("#nome").text(titulo);
+      $("#localidade").text(localidade);
+      $("#descricao").text(descricao);
+  });
+  </script>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -59,7 +73,7 @@
         </div>
       </div>
       <div class="container info-empregos">
-        <h1>Designer Gráfico</h1>
+        <h1 id="nome" name="nome" value="Design"> -</h1>
         <div class="row text-center">
           <div class="col-sm-3 col-xs-6 first-box">
             <h1><span class="glyphicon glyphicon-earphone"></span></h1>
@@ -69,7 +83,7 @@
           <div class="col-sm-3 col-xs-6 second-box">
             <h1><span class="glyphicon glyphicon-home"></span></h1>
             <h3>Localização</h3>
-            <p>Porto</p><br>
+            <p id="localidade" value="">-</p><br>
           </div>
           <div class="col-sm-3 col-xs-6 third-box">
             <h1><span class="glyphicon glyphicon-send"></span></h1>
@@ -83,14 +97,12 @@
           </div>
         </div><div class="row">
           <div class="col-md-6">
-            <h1>Informações</h1>
-            Designer gráfico ou Projetista Gráfico é o profissional habilitado a efetuar atividades relacionadas ao design gráfico. Logo, o designer gráfico é aquele profissional que traz ordem estrutural e forma à informação visual impressa ou virtual.
-
-            Exemplos de produtos do trabalho de um designer gráfico são as páginas diagramadas de um livro ou uma revista, a configuração visual de uma embalagem, logotipos de empresas e instituições, fontes tipográficas, entre outros. O escopo de sua atividade pode também se estender à reflexão das possibilidades de estruturação visual das mensagens e sua repercussão social: assim como um arquiteto não apenas projeta edifícios mas também reflete acerca da organização do contexto urbanístico de um assentamento humano, é papel do designer gráfico não apenas desenvolver soluções visuais de comunicação, mas também refletir acerca do atual âmbito de produção e consumo de mensagens. São de relevância para o designer gráfico exercer sua atividade o domínio sobre as tecnologias que lhe servem de ferramenta, e a construção de um repertório visual e de cultura geral amplos.          </div>
-            <div class="col-md-6">
+            <h1>Descrição</h1>
+            <p id="descricao" value=""> - </p> </div>
+            <!--div class="col-md-6">
               <h1>Extras</h1>
               O termo, a princípio, descreve habilitações diversas que mantêm uma formação ou prática semelhante. Portanto, designer de livros, designer de tipos, diagramador, designer de embalagem ou designer de cartaz, por exemplo, seriam diferentes atuações de designers gráficos. O mais importante para definir a área de atuação de um designer gráfico é perceber a natureza dessa atuação (mídia impressa) e se ela é relacionada à acepção geral do termo design gráfico. A denominação foi cunhada originalmente em inglês (graphic designer), por William Addison Dwiggins em 1922.          </div>
-            </div>
+            </div-->
           </div>
           <footer>
             <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">

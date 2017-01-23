@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 22-Jan-2017 às 02:00
+-- Generation Time: 23-Jan-2017 às 00:12
 -- Versão do servidor: 5.6.31
 -- PHP Version: 5.5.38
 
@@ -28,20 +28,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `empregos` (
   `id` int(11) NOT NULL,
-  `nomeanuncio` varchar(255) NOT NULL,
+  `titulo` varchar(255) NOT NULL,
   `localidade` varchar(255) NOT NULL,
-  `data` date NOT NULL,
+  `data` datetime NOT NULL,
+  `descricao` varchar(255) NOT NULL,
   `idestado` int(11) NOT NULL,
   `idtipoanuncio` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `empregos`
 --
 
-INSERT INTO `empregos` (`id`, `nomeanuncio`, `localidade`, `data`, `idestado`, `idtipoanuncio`) VALUES
-(1, 'Informático', 'Porto', '2017-01-09', 1, 1),
-(2, 'Rogerio', 'Fama', '2017-01-10', 1, 1);
+INSERT INTO `empregos` (`id`, `titulo`, `localidade`, `data`, `descricao`, `idestado`, `idtipoanuncio`) VALUES
+(1, 'Design Gráfico', 'Porto', '2017-01-09 00:00:00', 'texto de descrição exemplo', 1, 1),
+(2, 'Programador', 'Famalicão', '2017-01-10 00:00:00', 'texto de descrição exemplo', 1, 1),
+(3, 'Multimédia', 'Porto', '2017-01-22 23:16:10', 'texto de descrição exemplo', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -94,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `utilizadores` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `data` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `utilizadores`
@@ -103,7 +105,8 @@ CREATE TABLE IF NOT EXISTS `utilizadores` (
 INSERT INTO `utilizadores` (`id`, `nome`, `email`, `password`, `data`) VALUES
 (1, 'rodolfo', 'rodolfomota96@gmail.com', '123123', '0000-00-00'),
 (2, 'rasdas', 'csgoinzane@gmail.com', '123123', '0000-00-00'),
-(3, 'rasdas', 'Dompaccough42@einrot.com', '123123', '0000-00-00');
+(3, 'rasdas', 'Dompaccough42@einrot.com', '123123', '0000-00-00'),
+(4, 'sou lindo', '123@gmail.com', '123123', '0000-00-00');
 
 --
 -- Indexes for dumped tables
@@ -141,7 +144,7 @@ ALTER TABLE `utilizadores`
 -- AUTO_INCREMENT for table `empregos`
 --
 ALTER TABLE `empregos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `estados`
 --
@@ -156,7 +159,7 @@ ALTER TABLE `tipoanuncio`
 -- AUTO_INCREMENT for table `utilizadores`
 --
 ALTER TABLE `utilizadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
