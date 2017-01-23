@@ -10,7 +10,25 @@
   <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="./js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./js/jquery.js"></script>
-  <script type="text/javascript" src="./js/java.js"></script>
+  <!--script type="text/javascript" src="./js/java.js"></script-->
+  <script type="text/javascript">
+  $(document).ready(function() {
+          var url = "http://192.168.1.6/Projeto2/php/empregos.php";
+          $.getJSON(url, function(result) {
+              console.log(result);
+              $.each(result, function(i, field) {
+                  var id = field.id;
+                  var nome = field.titulo;
+                  var localidade = field.localidade;
+                  var data = field.data;
+                  var descricao = field.descricao;
+                  var idestado = field.idestado;
+                  var idtipoanuncio = field.idtipoanuncio;
+                  $("#listview").append("<tr data-status='pagado'><td><a href='infoemprego.html?id=" + id +"&nome=" + nome + "&localidade=" + localidade + "&descricao=" + descricao+ "'><i class='fa fa-plus'></i></a></td><td><a href='javascript:;' class='star'><i class='glyphicon glyphicon-star'></i></a></td><td><div class='media'><div class='media-body'><span class='media-meta pull-right'>"+ data +"</span><h4 class='title'>"+ nome + "<span class='pull-right pagado'>(Disponivel)</span></h4><p class='summary'><i class='fa fa-map-marker' aria-hidden='true'></i> "+ localidade +"</p></div></div></td></tr>");
+              });
+          });
+      });
+  </script>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -236,7 +254,7 @@
               <div class="table-container">
                 <h3> Anúncios </h3>
                 <table id="listview" class="table table-filter">
-                  <tr data-status="pagado">
+                  <!--tr data-status="pagado">
                     <td>
                       <a href="#"><i class="fa fa-plus"></i></a>
                     </td>
@@ -257,7 +275,7 @@
                         </div>
                       </div>
                     </td>
-                    </tr>
+                  </tr-->
                 </table>
               </div>
             </div>

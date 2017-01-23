@@ -1,6 +1,6 @@
 <?php
 require_once '../php/dbconfig.php';
-
+/*
 if(isset($_POST))
 {
  $email = mysql_escape_string($_POST['loginemail']);
@@ -11,6 +11,21 @@ if(isset($_POST))
  }
  else{
   echo "Wrong password";
+ }
+}*/
+if(isset($_POST['btn_login']))
+{
+  $email = mysqli_real_escape_string($con,$_POST['loginemail']);
+  $password = mysqli_real_escape_string($con,$_POST['loginpassword']);
+  $sql = "SELECT email,password FROM utilizadores WHERE email = '$email' and password = '$password'";
+  $result = mysqli_query($con,$sql);
+  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+  $active = $row['active'];
+  $count = mysqli_num_rows($result);
+  if($count == 1) {
+  echo "sucesso";
+  }else {
+  echo "nao deu";
  }
 }
 ?>
