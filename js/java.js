@@ -83,6 +83,7 @@ $(function() {
         minlength: "Your password must be at least 5 characters long",
         maxlength: "Your password must be up to 10 characters long"
       },
+<<<<<<< HEAD
       loginemail: {
         required: "Please enter a valid email address",
         email: "Tem de ser email"
@@ -118,3 +119,39 @@ $(function() {
       }
     });
   });
+=======
+      loginemail: "Please enter a valid email address"
+    }
+  });
+});
+
+$("#btn_login").click(function(){
+  var email=$("#loginemail").val();
+  var password=$("#loginpassword").val();
+  var dataString="loginemail="+email+"&loginpassword="+password+"&btn_login=";
+  if($.trim(email).length>0 & $.trim(password).length>0)
+  {
+    $.ajax({
+      type: "POST",
+      url: "http://192.168.1.6/Projeto2/php/login.php",
+      data: dataString,
+      crossDomain: true,
+      cache: false,
+      beforeSend: function(){ $("#btn_login").html('Connecting...');},
+      success: function(data){
+        if(data=="success")
+        {
+          localStorage.login="true";
+          localStorage.email=email;
+          window.location.href = "index.html";
+        }
+        else if(data="failed")
+        {
+          alert("Login error");
+          $("#btn_login").html('Login');
+        }
+      }
+    });
+  }return false;
+});
+>>>>>>> origin/master
